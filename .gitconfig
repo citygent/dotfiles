@@ -5,11 +5,16 @@
 [alias]
 
 	st = status
-    ci = commit
-    br = branch
-    co = checkout
-    df = diff
-    lg = log -p
+	ci = commit
+	br = branch
+	co = checkout
+	df = diff
+	lg = log -p
+
+	# Pushing/removing branches from remote origin
+	branch-name = !git branch | sed -e '/^[^*]/d' -e 's/^* //' -e 's/master/STOP_TRYING_TO_PUBLISH_MASTER_YOU_IDIOT/'
+	publish = !git push -u origin $(git branch-name)
+	unpublish = !git push origin :$(git branch-name)
 
 	# View the SHA, description, and history graph of the latest 20 commits
 	l = log --pretty=oneline -n 20 --graph
@@ -92,5 +97,5 @@
 	default = simple
 
 [branch]
-    autosetuprebase = always
-    mergeoptions = --no-ff
+	autosetuprebase = always
+	mergeoptions = --no-ff
