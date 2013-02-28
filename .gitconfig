@@ -86,6 +86,10 @@
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
 
+[branch]
+	autosetuprebase = always
+	mergeoptions = --no-ff
+
 # Use `origin` as the default remote on the `master` branch in all cases
 [branch "master"]
 	remote = origin
@@ -106,8 +110,4 @@
 	insteadOf = "gist:"
 
 [push]
-	default = simple
-
-[branch]
-	autosetuprebase = always
-	mergeoptions = --no-ff
+	default = current
