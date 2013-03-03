@@ -16,8 +16,8 @@ chflags hidden ~/bin
 
 # Review more from: http://knoopx.net/2011/10/28/os-x-lion-tweaks
 
-# Hide user bin in Finder
-[ -e "~/bin" ] && chflags hidden "~/bin"
+# Hide user /bin in Finder
+[ -e ~/bin ] && chflags hidden ~/bin
 
 
 ###############################################################################
