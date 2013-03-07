@@ -30,3 +30,7 @@ styles=.css,.less,.sass,.scss
 # Assets
 --type-set
 assets=.css,.less,.sass,.scss,.js,.coffee
+
+# ignore minified JS files
+-G
+(?<![\-\.]min\.js)$
