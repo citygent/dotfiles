@@ -55,6 +55,9 @@
 	# Undo a `git push`
 	undopush = push -f origin HEAD^:master
 
+	# Undo last commit
+	undo-commit = reset --soft HEAD^
+
 [apply]
 	# Detect whitespace errors when applying a patch
 	whitespace = fix
