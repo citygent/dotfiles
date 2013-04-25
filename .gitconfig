@@ -59,7 +59,7 @@
 	undo-commit = reset --soft HEAD^
 
         # A more ack-like way of using git grep, needs work
-        ack = "!a() { git grep $1 -- \"*.${2:-*}\"; }; a"
+        ack = "!a() { git grep \"$1\" -- \"*.${2:-*}\"; }; a"
 
 [apply]
 	# Detect whitespace errors when applying a patch
