@@ -55,7 +55,7 @@ export PS1="\[${BOLD}${MAGENTA}\]\u \[$WHITE\]at \[$ORANGE\]\h \[$WHITE\]in \[$G
 export PS2="\[$ORANGE\]→ \[$RESET\]"
 
 if [ $ITERM_SESSION_ID ]; then
-  export PROMPT_COMMAND='echo -ne "\033];${PWD##*/}\007"; ':"$PROMPT_COMMAND";
+  export PROMPT_COMMAND='echo -ne "\033];${PWD##*/}$(parse_git_dirty)\007"; ':"$PROMPT_COMMAND";
 fi
 
 # Piece-by-Piece Explanation:
