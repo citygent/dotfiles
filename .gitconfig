@@ -15,6 +15,7 @@
 	branch-name = !git branch | sed -e '/^[^*]/d' -e 's/^* //' -e 's/master/STOP_TRYING_TO_PUBLISH_MASTER_YOU_IDIOT/'
 	publish = !git push -u origin $(git branch-name)
 	unpublish = !git push origin :$(git branch-name)
+	fpush = !git push --force origin $(git branch-name)
 
 	# View the SHA, description, and history graph of the latest 20 commits
 	l = log --pretty=oneline -n 20 --graph
