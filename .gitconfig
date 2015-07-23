@@ -62,6 +62,8 @@
         # A more ack-like way of using git grep, needs work
         ack = "!a() { git grep \"$1\" -- \"*.${2:-*}\"; }; a"
 
+  # Fetch from all remotes, pruning stale branches, merge remote of this branch
+  up = "!git remote update -p; git merge --ff-only @{u}"
 [apply]
 	# Detect whitespace errors when applying a patch
 	whitespace = fix
