@@ -20,6 +20,9 @@
 	# View the SHA, description, and history graph of the latest 20 commits
 	l = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 
+	# Patch log with diff stats and full commit info
+	lp = log --stat --color -p
+
 	# View the current working tree status using the short format
 	s = status -s
 
