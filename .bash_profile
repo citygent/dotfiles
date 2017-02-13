@@ -38,3 +38,7 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 [ -f /etc/bash_completion ] && source /etc/bash_completion
 
 source $HOME/.rvm/scripts/rvm
+
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
